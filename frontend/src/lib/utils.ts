@@ -1,3 +1,10 @@
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 export function calculateSI(principal: number, tenureDays: number, rate = 12): number {
   return (principal * rate * tenureDays) / (365 * 100);
 }

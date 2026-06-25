@@ -4,6 +4,24 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-brand-200 selection:text-brand-900;
+  }
+}
+
+@layer utilities {
+  .bg-mesh {
+    background-color: #eef2ff;
+    background-image: 
+      radial-gradient(at 40% 20%, hsla(245, 100%, 82%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(253, 100%, 75%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(245, 100%, 82%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsla(253, 100%, 75%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(245, 100%, 82%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, hsla(253, 100%, 75%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, hsla(245, 100%, 82%, 0.3) 0px, transparent 50%);
+  }
+  
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-sm;
   }
 }
